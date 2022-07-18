@@ -1,14 +1,6 @@
 
 const leapYears = function (givenYear) {
-    if (givenYear % 4 === 0) {
-
-        if (givenYear % 100 === 0 && givenYear % 400 === 0) {
-            givenYear = true;
-        }
-    } else {
-        givenYear = false;
-    }
-    return givenYear;
+    return givenYear % 4 === 0 && (givenYear % 400 === 0 || givenYear % 100 != 0);
 };
 
 // Do not edit below this line
@@ -21,5 +13,7 @@ module.exports = leapYears;
  unless they are divisible by 400 (like 1600 and 2000, 
  which were in fact leap years). 
 (Yes, it's all pretty confusing)
+
+&& 
 
 */
